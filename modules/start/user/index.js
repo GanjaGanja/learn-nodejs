@@ -1,11 +1,13 @@
-let phrases = require('./ru.json');
+let log = require('logger')(module);
+
+let db = require('db');
 
 function User(name) {
     this.name = name;
 }
 
 User.prototype.hello = function(who) {
-    console.log(`${phrases.Hello}, ${who.name}`);
+    log(`${db.getPhrase('Hello')}, ${who.name}`);
 };
 
 console.log('some test string');
