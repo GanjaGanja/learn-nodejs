@@ -1,6 +1,6 @@
-var user = require('./user'); // outdated 'CommonJS module'
+let user = require('./user'); // outdated 'CommonJS module'
 
-var vasya = new user.User('Vasya');
-var petya = new user.User('Петя');
+let vasya = new user.User('Vasya');
+let petya = new user.User('Петя');
 
 vasya.hello(petya);
